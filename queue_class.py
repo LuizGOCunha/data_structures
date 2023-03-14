@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Union
 
 class Queue:
     '''Queues are data structures that are similar to Stacks, but obey a First In, First Out logic.
@@ -14,7 +14,7 @@ class Queue:
         '''Put item in the end of the queue'''
         self.queue.append(item)
 
-    def dequeue(self) -> Any:
+    def dequeue(self) -> Union[Any, None]:
         '''Take item from beginning of the queue and returns it'''
         if self.is_empty():
             return None
