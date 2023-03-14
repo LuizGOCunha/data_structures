@@ -14,8 +14,8 @@ class Stack:
     A real life example of the use of Stacks would be the way a terminal tracks commands or how 
     a browser tracks website history.'''
     
-    def __init__(self, *items:Any) -> None:
-        self.stack = list(items)
+    def __init__(self) -> None:
+        self.stack = list()
 
     def push(self, item) -> None:
         '''Puts an item on top of the stack'''
