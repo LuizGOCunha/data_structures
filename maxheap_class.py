@@ -6,13 +6,12 @@ class MaxHeap:
     can have two child nodes that should have smaller values, and each can have one parent that
     should have a greater value. This data structure can be used for when you want easy access to
     the maximum value inside an array, because the maximum value will always stay as index 1.'''
-    def __init__(self, organize:bool=False,*items:int) -> None:
+    def __init__(self,*items:int) -> None:
         self.heap = list(items)
         # insert the 0 value in the first column to make it a 1 based heap
         self.heap.insert(0,0)
         # organize the heap
-        if organize:
-            self.organize_heap()
+        self.organize_heap()
 
     def organize_heap(self):
         '''A useful method that allows us to float_up all indexes to its appropriate position.'''
@@ -158,5 +157,5 @@ class MaxHeap:
 
 if __name__ == "__main__":        
     v = MaxHeap(1,5,6,78,8,9,128,892)
-    v.validate()
+    print(v)
 
