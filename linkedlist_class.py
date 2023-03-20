@@ -1,13 +1,6 @@
+from node_class import Node
+
 from typing import Union
-
-class Node:
-
-    def __init__(self, value, next=None) -> None:
-        self.value = value
-        self.next = next
-
-    def __str__(self) -> str:
-        return f"({self.value})"
     
 class LinkedList:
 
